@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Billing System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Electric Billing System</h1>
+  </header>
+  <main>
+    <div class="container">
+      <h2>Manage Electricity Bills</h2>
+      <button onclick="addCustomer()">Add Customer</button>
+      <button onclick="recordMeterReading()">Record Meter Reading</button>
+      <button onclick="generateBill()">Generate Bill</button>
+      <button onclick="viewAllBills()">View All Bills</button>
+    </div>
+    
+    <div id="customer-form" style="display: none;">
+      <h3>Add New Customer</h3>
+      <label for="customer-id">Customer ID:</label>
+      <input type="text" id="customer-id" required>
+      <label for="customer-name">Customer Name:</label>
+      <input type="text" id="customer-name" required>
+      <button onclick="submitNewCustomer()">Submit</button>
+      <button onclick="cancelForm()">Cancel</button>
+    </div>
+    
+    <div id="meter-reading-form" style="display: none;">
+      <h3>Record Meter Reading</h3>
+      <label for="meter-reading">Meter Reading:</label>
+      <input type="number" id="meter-reading" required>
+      <button onclick="submitMeterReading()">Submit</button>
+      <button onclick="cancelForm()">Cancel</button>
+    </div>
+
+    <div id="bill-section" style="display: none;">
+      <h3>All Bills</h3>
+      <ul id="bills-list"></ul>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Electric Billing System</p>
+  </footer>
+
+  <script src="script.jsx"></script>
+</body>
+</html>
